@@ -5,7 +5,7 @@
    <!-- ********************************** -->
 
    <target name="compile-jibx-eclipse">
-      <ant dir="${basedir}/../.." target="compile-repository-jibx" />
+      <!--ant dir="${basedir}/../.." target="compile-repository-jibx" /-->
    </target>
    
    <target name="build">

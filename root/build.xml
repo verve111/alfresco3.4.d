@@ -135,7 +135,7 @@
       <!-- Add on all the 3rd party libs based on the eclipse project -->
       <!-- Includes libs that are both exported and non-exported -->
       <script language="javascript" classpath="${classpath.bsf_javascript}"> <![CDATA[
-	  //load("nashorn:mozilla_compat.js");
+	     load("nashorn:mozilla_compat.js");
          importClass(java.util.regex.Matcher);
          importClass(java.util.regex.Pattern);
          importClass(java.io.File);

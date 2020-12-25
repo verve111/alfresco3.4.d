@@ -61,10 +61,9 @@
    </target>
    
    <target name="compile-datamodel" 
-           depends="compile-datamodel-java, 
-                    compile-datamodel-jibx" />
+           depends="compile-datamodel-java" />
 
-   <target name="compile-datamodel-java" 
+   <target name="compile-datamodel-java"
            depends="init">
       <compile-java projectdir="${dir.project.datamodel}" />
    </target>
@@ -88,10 +87,9 @@
                          projectdir="${dir.project.datamodel}"/>
    </target>
 
-   <target name="compile-datamodel-jibx" 
+   <!--target name="compile-datamodel-jibx"
            depends="init">
-      <!-- load the JIBX task definition -->
-      <taskdef name="bind" 
+      <taskdef name="bind"
                classname="org.jibx.binding.ant.CompileTask"
                classpath="${dir.project.3rdparty.lib}/jibx/jibx-bind.jar;${dir.project.3rdparty.lib}/jibx/jibx-run.jar;${dir.project.3rdparty.lib}/bcel.jar;${dir.project.3rdparty.lib}/xpp3-1.1.3_8.jar" />
 
@@ -103,7 +101,7 @@
             <pathelement path="${dir.project.datamodel.classes}"/>
          </classpath>
       </bind>
-   </target>
+   </target-->
 
    <!-- ******************** -->
    <!-- ** MBeans Project ** -->
@@ -307,18 +305,16 @@
    </target>
    
    <target name="compile-repository" 
-           depends="compile-repository-java, 
-                    compile-repository-jibx" />
+           depends="compile-repository-java" />
    
    <target name="compile-repository-java" 
            depends="init">
       <compile-java projectdir="${dir.project.repository}" />
    </target>
    
-   <target name="compile-repository-jibx" 
+   <!--target name="compile-repository-jibx"
            depends="init">
-      <!-- load the JIBX task definition -->
-      <taskdef name="bind" 
+      <taskdef name="bind"
                classname="org.jibx.binding.ant.CompileTask"
                classpath="${dir.project.3rdparty.lib}/jibx/jibx-bind.jar;${dir.project.3rdparty.lib}/jibx/jibx-run.jar;${dir.project.3rdparty.lib}/bcel.jar;${dir.project.3rdparty.lib}/xpp3-1.1.3_8.jar" />
 
@@ -331,7 +327,7 @@
             <pathelement path="${dir.project.repository.classes}"/>
       	 </classpath>
      </bind>
-   </target>
+   </target-->
    
    <target name="package-repository"
            depends="compile-repository">

@@ -8,7 +8,7 @@
 #**/build
 **/build_gradle
 **/dist
-/build
+build
 #**/node_modules
 **/test-coverage
 **/tmp
